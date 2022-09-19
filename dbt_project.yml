@@ -28,7 +28,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   dbt_petz_landing_to_raw:
-    src:
-      +materialized: incremental
     
    
