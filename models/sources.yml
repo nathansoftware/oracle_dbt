@@ -1,9 +1,0 @@
-version: 2
-
-sources:
-  - name: PC_FIVETRAN_DB #banco de dados 
-    database: PC_FIVETRAN_DB
-    schema: ORACLE_FIVETRAN 
-    tables:
-      - name: LANDING_USERS
-        identifier: USERS 
