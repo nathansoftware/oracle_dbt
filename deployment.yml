@@ -1,0 +1,30 @@
+jobs:
+  - name: daily
+    targetName: dev
+    schedule: 0 12 * * *
+    timeout: 2h30m
+    steps:
+      - name: run models
+        command: dbt run -m concat
+      - name: test models
+        command: dbt test -m concat
+
+  - name: nightly
+    schedule: 0 0 * * *
+    steps:
+      - name: run models
+        command: dbt run --models users
+
+  - name: weekdays
+    schedule: 30 7 * * 1-5
+    steps: 
+      - name: run models
+        commands: dbt run
+
+  - name: every30minutes
+    schedule: '*/30 * * * *'
+    steps:
+    - name: version
+      command: dbt --version
+
+  
