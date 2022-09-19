@@ -7,3 +7,6 @@ sources:
     tables:
       - name: LANDING_USERS
         identifier: USERS 
+
+      - name: TB_TESTE
+        identifier: TESTE
