@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: run models
         command: dbt run -m concat
-      - name: test models
-        command: dbt test -m concat
+      - name: run snapshots
+        command: dbt snapshot
 
   
